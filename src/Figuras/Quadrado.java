@@ -6,14 +6,13 @@ public class Quadrado extends Poligono implements Diagonal{
 		
 	}
 	
-	public double calculaDiagonal() {
-		double diagonal = Math.sqrt((super.getAltura() * 2) + (super.getBase() * 2));
-		return diagonal;
-	}
-	
 	public Quadrado(int base, int altura) {
 		super.setAltura(altura);
 		super.setBase(base);
 	}
 	
+	public double calculaDiagonal() {
+		double diagonal = Math.sqrt((super.getAltura() * super.getAltura()) + (super.getBase() * super.getBase()));
+		return diagonal;
+	}
 }
